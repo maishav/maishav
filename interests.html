@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interests — Maisha Maliha | Photography & Reading</title>
+  <meta name="description"
+        content="Beyond research — Maisha Maliha's product photography work and book reviews. An economics researcher with a lens for light, form, and ideas." />
+  <meta name="keywords"
+        content="Maisha Maliha photography, product photography Bangladesh, economics researcher interests, development economics book reviews, Maisha Maliha Instagram" />
+  <meta name="author"  content="Maisha Maliha" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://maishav.github.io/interests.html" />
+  <meta property="og:title"       content="Interests — Maisha Maliha" />
+  <meta property="og:description" content="Product photography and book reviews — the other sides of an economics researcher." />
+  <meta property="og:url"         content="https://maishav.github.io/interests.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ── PHOTOGRAPHY GRID ───────────────────────────────────── */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .photo-slot {
+      aspect-ratio: 4 / 5;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .photo-slot:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(42,61,53,0.13);
+    }
+
+    /* When a real image is inside, it fills the slot */
+    .photo-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .photo-slot:hover img { transform: scale(1.04); }
+
+    /* Caption overlay — shows on hover */
+    .photo-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(42,61,53,0.88) 0%, transparent 100%);
+      padding: 1.5rem 1rem 1rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .photo-slot:hover .photo-caption { opacity: 1; }
+    .photo-caption h4 { color: #fff; font-size: 0.88rem; font-family: var(--sans); font-weight: 600; margin-bottom: 0.2rem; }
+    .photo-caption p  { color: rgba(255,255,255,0.75); font-size: 0.75rem; }
+
+    /* Placeholder state (before real photos are added) */
+    .photo-placeholder {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 0.5rem;
+    }
+    .ph-icon { font-size: 2rem; opacity: 0.2; }
+    .ph-label { font-size: 0.72rem; color: var(--text-mu); text-align: center; padding: 0 1rem; }
+
+    /* Tall slot — spans 2 rows */
+    .photo-slot-tall { grid-row: span 2; aspect-ratio: auto; min-height: 300px; }
+
+    /* Instagram CTA banner */
+    .ig-banner {
+      background: var(--green);
+      border-radius: var(--r-lg);
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .ig-banner h3 { color: #fff; font-family: var(--serif); font-size: 1.4rem; font-weight: 400; }
+    .ig-banner p  { color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-top: 0.3rem; }
+    .ig-handle {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.01em;
+    }
+
+    /* ── BOOK REVIEWS ───────────────────────────────────────── */
+    .review-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 1.75rem;
+      transition: box-shadow 0.25s, transform 0.25s;
+      margin-bottom: 1.25rem;
+    }
+    .review-card:hover {
+      box-shadow: 0 6px 28px rgba(42,61,53,0.09);
+      transform: translateY(-2px);
+    }
+
+    /* Book cover */
+    .book-cover {
+      width: 100px;
+      aspect-ratio: 2 / 3;
+      border-radius: 3px;
+      overflow: hidden;
+      flex-shrink: 0;
+      position: relative;
+      box-shadow: 3px 3px 12px rgba(0,0,0,0.15);
+    }
+    .book-cover img { width: 100%; height: 100%; object-fit: cover; }
+    /* Placeholder cover with spine effect */
+    .cover-placeholder {
+      width: 100%; height: 100%;
+      display: flex; align-items: flex-end;
+      padding: 0.5rem;
+    }
+    .cover-placeholder p {
+      font-size: 0.65rem;
+      line-height: 1.3;
+      font-weight: 600;
+      color: inherit;
+    }
+
+    /* Review content */
+    .review-meta { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+    .review-author { font-size: 0.82rem; color: var(--text-mu); }
+    .review-year   { font-size: 0.75rem; color: var(--text-mu); }
+    .review-title  { font-family: var(--serif); font-size: 1.2rem; color: var(--green); line-height: 1.25; margin-bottom: 0.2rem; }
+    .stars { color: var(--gold); font-size: 0.9rem; letter-spacing: 0.05em; }
+    .stars-empty { color: var(--border-d); }
+    .review-text {
+      font-size: 0.92rem;
+      color: var(--text-sec);
+      line-height: 1.8;
+      margin-top: 0.6rem;
+      font-style: italic;
+      border-left: 2px solid var(--gold-lt);
+      padding-left: 1rem;
+    }
+    .review-verdict {
+      margin-top: 0.75rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--green-mid);
+    }
+
+    /* Palette helpers for book covers */
+    .cov-1 { background: #2A3D35; color: #CDE3D8; }
+    .cov-2 { background: #EEE3C3; color: #7A5E1E; }
+    .cov-3 { background: #1a2e3d; color: #a8c4d4; }
+    .cov-4 { background: #3d2a2a; color: #EDD9D9; }
+    .cov-5 { background: #2d3a2a; color: #c8dcc3; }
+
+    /* ── SHARED ─────────────────────────────────────────────── */
+    .section-intro { max-width: 580px; }
+
+    @media (max-width: 768px) {
+      .photo-grid { grid-template-columns: repeat(2, 1fr); }
+      .photo-slot-tall { grid-row: span 1; aspect-ratio: 4/5; min-height: auto; }
+    }
+    @media (max-width: 480px) {
+      .photo-grid { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+      .review-card { grid-template-columns: 80px 1fr; gap: 1.25rem; padding: 1.25rem; }
+      .book-cover { width: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAV ════════════════════════════════════════════════════ -->
+<input type="checkbox" id="nav-cb" class="nav-cb">
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Maisha <em>Maliha</em></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="interests.html" class="active">Interests</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li class="nav-cta"><a href="contact.html">Contact</a></li>
+    </ul>
+    <label for="nav-cb" class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
+  </div>
+</nav>
+
+<!-- ══ PAGE HERO ═══════════════════════════════════════════════ -->
+<div class="page-hero">
+  <div class="container">
+    <p class="label">Beyond Research</p>
+    <h1>Lens, light &amp; literature.</h1>
+    <p>
+      A researcher's curiosity doesn't stay inside the data. Here is what I notice
+      when I look up from the numbers — through a camera, and through books.
+    </p>
+  </div>
+</div>
+
+<main>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 1 — PHOTOGRAPHY
+  ════════════════════════════════════════════════════════════ -->
+  <section id="photography">
+    <div class="container">
+
+      <div class="g32" style="align-items:start; gap:4rem; margin-bottom:3rem;">
+        <div style="position:sticky; top:calc(var(--nav-h) + 2rem);">
+          <p class="label">Product Photography</p>
+          <h2 style="margin-top:0.4rem;">Occasional work behind the lens.</h2>
+          <p class="mt-2">
+            I shoot product photography on the side — skincare, lifestyle, and small-brand
+            campaigns. It is the same instinct I bring to research: slow down, observe,
+            find the angle that makes something ordinary reveal itself.
+          </p>
+          <p class="mt-2">
+            Available for occasional commissioned work. All inquiries welcome
+            via the contact page.
+          </p>
+          <div class="gap-sm mt-3">
+            <!-- ✏️ Replace with your real Instagram URL -->
+            <a href="https://instagram.com/YOUR-INSTAGRAM-HANDLE"
+               target="_blank" rel="noopener"
+               class="btn btn-green">
+              Follow on Instagram ↗
+            </a>
+            <a href="contact.html" class="btn btn-outline">Enquire →</a>
+          </div>
+        </div>
+
+        <!-- Photography grid -->
+        <div>
+          <div class="photo-grid">
+
+            <!-- ════════════════════════════════════════════════
+                 HOW TO ADD YOUR PHOTOS:
+                 1. Save your photos to the images/ folder
+                    (e.g. images/photo-1.jpg, images/photo-2.jpg)
+                 2. For each slot below, replace the
+                    <div class="photo-placeholder"> block with:
+                    <img src="images/photo-1.jpg" alt="Brief description">
+                 3. Edit the caption text (h4 and p inside .photo-caption)
+                 4. The .photo-slot-tall class makes a slot taller —
+                    use it for a portrait-oriented hero photo.
+            ═════════════════════════════════════════════════ -->
+
+            <!-- Slot 1 — tall hero photo -->
+            <div class="photo-slot photo-slot-tall">
+              <!-- ✏️ Replace with: <img src="images/photo-1.jpg" alt="Product name"> -->
+              <div class="photo-placeholder">
+                <span class="ph-icon">📷</span>
+                <span class="ph-label">Add your best photo here<br>(tall format)</span>
+              </div>
+              <div class="photo-caption">
+                <h4>Product Name</h4>      <!-- ✏️ Edit caption -->
+                <p>Brand / Category</p>
+              </div>
+            </div>
+
+            <!-- Slot 2 -->
+            <div class="photo-slot">
+              <div class="photo-placeholder">
+                <span class="ph-icon">🌿</span>
+                <span class="ph-label">Photo 2</span>
+              </div>
+              <div class="photo-caption">
+                <h4>Product Name</h4>
+                <p>Brand / Category</p>
+              </div>
+            </div>
+
+            <!-- Slot 3 -->
+            <div class="photo-slot">
+              <div class="photo-placeholder">
+                <span class="ph-icon">✨</span>
+                <span class="ph-label">Photo 3</span>
+              </div>
+              <div class="photo-caption">
+                <h4>Product Name</h4>
+                <p>Brand / Category</p>
+              </div>
+            </div>
+
+            <!-- Slot 4 -->
+            <div class="photo-slot">
+              <div class="photo-placeholder">
+                <span class="ph-icon">🕯️</span>
+                <span class="ph-label">Photo 4</span>
+              </div>
+              <div class="photo-caption">
+                <h4>Product Name</h4>
+                <p>Brand / Category</p>
+              </div>
+            </div>
+
+            <!-- Slot 5 -->
+            <div class="photo-slot">
+              <div class="photo-placeholder">
+                <span class="ph-icon">📦</span>
+                <span class="ph-label">Photo 5</span>
+              </div>
+              <div class="photo-caption">
+                <h4>Product Name</h4>
+                <p>Brand / Category</p>
+              </div>
+            </div>
+
+            <!-- Slot 6 -->
+            <div class="photo-slot">
+              <div class="photo-placeholder">
+                <span class="ph-icon">🌸</span>
+                <span class="ph-label">Photo 6</span>
+              </div>
+              <div class="photo-caption">
+                <h4>Product Name</h4>
+                <p>Brand / Category</p>
+              </div>
+            </div>
+
+          </div><!-- /photo-grid -->
+
+          <!-- Instagram CTA strip -->
+          <div class="ig-banner">
+            <div>
+              <h3>More on Instagram.</h3>
+              <p>Behind-the-scenes, process shots, and the full portfolio.</p>
+            </div>
+            <div style="text-align:right;">
+              <!-- ✏️ Replace with your Instagram handle -->
+              <p class="ig-handle">@YOUR-INSTAGRAM-HANDLE</p>
+              <a href="https://instagram.com/YOUR-INSTAGRAM-HANDLE"
+                 target="_blank" rel="noopener"
+                 class="btn btn-gold mt-2"
+                 style="display:inline-flex;">
+                Open Instagram ↗
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       SECTION 2 — BOOK REVIEWS
+  ════════════════════════════════════════════════════════════ -->
+  <section id="books" style="background:var(--surface);">
+    <div class="container">
+
+      <div class="g23" style="align-items:start; gap:4rem;">
+
+        <!-- Sticky sidebar -->
+        <div style="position:sticky; top:calc(var(--nav-h) + 2rem);">
+          <p class="label">Reading</p>
+          <h2 style="margin-top:0.4rem;">Books that shaped how I think.</h2>
+          <p class="mt-2">
+            I read across development economics, environmental policy, and narrative non-fiction.
+            These are not summaries — they are the questions each book left me with.
+          </p>
+          <blockquote class="mt-3">
+            <p>"The best economics writing clarifies what was always there but unseen."</p>
+          </blockquote>
+          <div class="mt-3">
+            <p class="label" style="margin-bottom:0.6rem;">Genres I follow</p>
+            <div class="tags">
+              <span class="tag tag-green">Development Economics</span>
+              <span class="tag tag-green">Environmental Policy</span>
+              <span class="tag tag-gold">Narrative Non-fiction</span>
+              <span class="tag tag-gold">Gender &amp; Society</span>
+              <span class="tag tag-rose">Data &amp; Science</span>
+              <span class="tag tag-rose">Historical Economics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book reviews -->
+        <div>
+
+          <!-- ════════════════════════════════════════════════
+               HOW TO ADD A BOOK REVIEW:
+               1. Copy one review-card block below
+               2. Edit: cover colour (.cov-1 to .cov-5),
+                  book title, author, year, genre tags,
+                  star rating (★ = filled, empty space = not filled),
+                  review text, and verdict line
+               3. To use a real book cover image:
+                  - Save as images/book-title.jpg
+                  - Replace <div class="cover-placeholder"> with
+                    <img src="images/book-title.jpg" alt="Book title cover">
+          ═════════════════════════════════════════════════ -->
+
+          <!-- Review 1 -->
+          <article class="review-card">
+            <div class="book-cover">
+              <!-- ✏️ Replace with: <img src="images/poor-economics.jpg" alt="Poor Economics cover"> -->
+              <div class="cover-placeholder cov-1">
+                <p>Poor<br>Economics</p>
+              </div>
+            </div>
+            <div>
+              <h3 class="review-title">Poor Economics: A Radical Rethinking of the Way to Fight Global Poverty</h3>
+              <div class="review-meta">
+                <span class="review-author">Abhijit V. Banerjee &amp; Esther Duflo</span>
+                <span class="review-year">· 2011</span>
+              </div>
+              <div>
+                <span class="stars">★★★★★</span>
+              </div>
+              <div class="tags mt-1">
+                <span class="tag tag-green">Development Economics</span>
+                <span class="tag tag-gold">Field Experiments</span>
+              </div>
+              <!-- ✏️ Write your own review in 2-4 sentences. Keep it personal and analytical. -->
+              <p class="review-text">
+                What stays with me is not the policy prescriptions but the method — the insistence
+                that you cannot design interventions for the poor without first sitting with them
+                and watching what they actually do. Banerjee and Duflo dismantled my assumption
+                that poverty is primarily a resource problem. It is also, deeply, an information and
+                incentive problem. I return to this book every time I am designing a field instrument.
+              </p>
+              <p class="review-verdict">→ Essential reading before any field research in development contexts.</p>
+            </div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="review-card">
+            <div class="book-cover">
+              <!-- ✏️ Replace with: <img src="images/why-nations-fail.jpg" alt="Why Nations Fail cover"> -->
+              <div class="cover-placeholder cov-2">
+                <p>Why<br>Nations<br>Fail</p>
+              </div>
+            </div>
+            <div>
+              <h3 class="review-title">Why Nations Fail: The Origins of Power, Prosperity, and Poverty</h3>
+              <div class="review-meta">
+                <span class="review-author">Daron Acemoglu &amp; James A. Robinson</span>
+                <span class="review-year">· 2012</span>
+              </div>
+              <div>
+                <span class="stars">★★★★</span><span class="stars-empty">★</span>
+              </div>
+              <div class="tags mt-1">
+                <span class="tag tag-green">Political Economy</span>
+                <span class="tag tag-gold">Institutions</span>
+                <span class="tag tag-rose">Historical Analysis</span>
+              </div>
+              <!-- ✏️ Edit this review -->
+              <p class="review-text">
+                The central argument — that inclusive institutions, not geography or culture, determine
+                long-run prosperity — is compelling but demands scrutiny. As someone researching coastal
+                Bangladesh, I found myself asking: what does "inclusion" look like when the institutional
+                failures are layered atop climate vulnerability? The framework holds, but it needs
+                more texture when applied to South Asian contexts where informality is not dysfunction
+                but adaptation.
+              </p>
+              <p class="review-verdict">→ Argues persuasively, though the granularity needed for field work requires supplementary reading.</p>
+            </div>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="review-card">
+            <div class="book-cover">
+              <!-- ✏️ Replace with: <img src="images/sixth-extinction.jpg" alt="The Sixth Extinction cover"> -->
+              <div class="cover-placeholder cov-3">
+                <p>The Sixth<br>Extinction</p>
+              </div>
+            </div>
+            <div>
+              <h3 class="review-title">The Sixth Extinction: An Unnatural History</h3>
+              <div class="review-meta">
+                <span class="review-author">Elizabeth Kolbert</span>
+                <span class="review-year">· 2014</span>
+              </div>
+              <div>
+                <span class="stars">★★★★★</span>
+              </div>
+              <div class="tags mt-1">
+                <span class="tag tag-green">Environmental Economics</span>
+                <span class="tag tag-gold">Narrative Non-fiction</span>
+                <span class="tag tag-rose">Climate</span>
+              </div>
+              <!-- ✏️ Edit this review -->
+              <p class="review-text">
+                Kolbert does what good economic writing rarely manages: she makes the stakes visceral.
+                Chapter by chapter, she reports from the front lines of extinction events that
+                are already underway — and the cumulative effect is not despair but a kind of
+                sharpened responsibility. For someone studying environmental behaviour in coastal
+                communities, this book was a reminder that the "environment" in environmental
+                economics is not an abstraction. It is a system already in crisis.
+              </p>
+              <p class="review-verdict">→ Should be required reading alongside any environmental economics syllabus.</p>
+            </div>
+          </article>
+
+          <!-- Review 4 -->
+          <article class="review-card">
+            <div class="book-cover">
+              <!-- ✏️ Replace with: <img src="images/factfulness.jpg" alt="Factfulness cover"> -->
+              <div class="cover-placeholder cov-4">
+                <p>Fact-<br>fulness</p>
+              </div>
+            </div>
+            <div>
+              <h3 class="review-title">Factfulness: Ten Reasons We're Wrong About the World</h3>
+              <div class="review-meta">
+                <span class="review-author">Hans Rosling</span>
+                <span class="review-year">· 2018</span>
+              </div>
+              <div>
+                <span class="stars">★★★★</span><span class="stars-empty">★</span>
+              </div>
+              <div class="tags mt-1">
+                <span class="tag tag-green">Data &amp; Statistics</span>
+                <span class="tag tag-gold">Development</span>
+              </div>
+              <!-- ✏️ Edit this review -->
+              <p class="review-text">
+                Rosling's optimism is evidence-based, which makes it genuinely persuasive rather
+                than merely reassuring. The ten instincts he identifies — gap, negativity, straight
+                line — are as useful as any methodological checklist. I now think about the
+                "fear instinct" every time I write a research brief: am I presenting risk accurately,
+                or am I amplifying it because alarming findings attract attention? The book
+                changed how I communicate data to non-specialist audiences.
+              </p>
+              <p class="review-verdict">→ Read this before writing your next research summary for policymakers.</p>
+            </div>
+          </article>
+
+          <!-- ✏️ ADD MORE REVIEWS: copy any review-card block above
+               and paste it here. Change the .cov-N class (1-5)
+               for a different cover colour. -->
+
+          <div class="info-box mt-3">
+            <p>📚 &nbsp;More reviews added as I read. Currently working through
+              <!-- ✏️ Update this with whatever you're reading now -->
+              <em>Development as Freedom</em> by Amartya Sen.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       CTA — ties both interests back to the professional identity
+  ═══════════════════════════════════════════════════════════ -->
+  <section style="border-top:1px solid var(--border);">
+    <div class="container" style="max-width:640px; text-align:center;">
+      <p class="label">The through-line</p>
+      <h2 style="margin-top:0.4rem;">Observation is the skill.</h2>
+      <p class="mt-2">
+        Whether it is framing a product under natural light, annotating a household
+        survey, or reading an economist's argument against the evidence —
+        the discipline is the same: look carefully, think slowly, communicate clearly.
+      </p>
+      <div class="gap-sm mt-4" style="justify-content:center;">
+        <a href="research.html" class="btn btn-green">See My Research →</a>
+        <a href="contact.html" class="btn btn-outline">Get in Touch →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <p class="f-brand">Maisha <em>Maliha</em></p>
+      <p>Economics researcher from Bangladesh working at the intersection of development, environment, and data.</p>
+    </div>
+    <div class="f-col"><h5>Pages</h5><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="interests.html">Interests</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="f-col"><h5>Interests</h5><ul>
+      <li><a href="interests.html#photography">Photography</a></li>
+      <li><a href="interests.html#books">Book Reviews</a></li>
+      <!-- ✏️ Update Instagram handle -->
+      <li><a href="https://instagram.com/YOUR-INSTAGRAM-HANDLE" target="_blank">Instagram ↗</a></li>
+    </ul></div>
+    <div class="f-col"><h5>Contact</h5><ul>
+      <li><a href="mailto:maishavmahi@gmail.com">maishavmahi@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/maisha-maliha-economics" target="_blank">LinkedIn</a></li>
+      <li><a href="contact.html">Send a Message</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-btm">
+    <p>© 2025 Maisha Maliha.</p>
+    <p>Built with HTML &amp; CSS · Hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

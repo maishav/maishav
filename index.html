@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ══ SEO ═══════════════════════════════════════════════════
+       ✏️ Replace maishav with your GitHub username below,
+          and update the description/keywords if your focus changes.
+  ════════════════════════════════════════════════════════════ -->
+  <title>Maisha Maliha — Economics Researcher | Bangladesh</title>
+  <meta name="description"
+        content="Maisha Maliha is a Bangladeshi economics graduate and researcher specialising in development economics, environmental economics, food security, and impact assessment. Available for research roles and graduate programs." />
+  <meta name="keywords"
+        content="Maisha Maliha, economics researcher Bangladesh, development economics Bangladesh, environmental economist Bangladesh, food security research Bangladesh, impact assessment researcher, STATA economist Bangladesh, econometrics researcher, coastal Bangladesh development, University of Barishal economics, qualitative quantitative research Bangladesh" />
+  <meta name="author" content="Maisha Maliha" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://maishav.github.io/index.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Maisha Maliha — Economics Researcher" />
+  <meta property="og:description" content="Economics graduate specialising in development, environment, and data research." />
+  <meta property="og:url"         content="https://maishav.github.io/" />
+  <meta property="og:image"       content="https://maishav.github.io/images/og-cover.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Maisha Maliha — Economics Researcher" />
+  <meta name="twitter:description" content="Economics graduate | Development · Environment · Data | Bangladesh" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ══ STRUCTURED DATA (JSON-LD) ══════════════════════════════
+       This helps Google understand who you are and show you in
+       knowledge panels and rich results. ✏️ Update URL + photo.
+  ════════════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Maisha Maliha",
+    "jobTitle": "Economics Researcher",
+    "description": "Bangladeshi economics graduate specialising in development economics, environmental economics, food security research, and quantitative data analysis.",
+    "url": "https://maishav.github.io",
+    "email": "maishavmahi@gmail.com",
+    "image": "https://maishav.github.io/images/maisha-maliha.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/maisha-maliha-economics"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Barishal",
+      "url": "https://bu.ac.bd/"
+    },
+    "knowsAbout": [
+      "Development Economics",
+      "Environmental Economics",
+      "Food Security Research",
+      "Econometrics",
+      "STATA",
+      "SPSS",
+      "NVivo",
+      "Impact Assessment",
+      "Qualitative Research",
+      "Quantitative Research",
+      "Kobo Toolbox",
+      "Data Analysis"
+    ],
+    "nationality": "Bangladeshi",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "BD",
+      "addressLocality": "Barishal"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Barishal University Research Society"
+    }
+  }
+  </script>
+
+  <style>
+    /* ── HOME-SPECIFIC STYLES ── */
+
+    /* Hero */
+    #hero {
+      padding-top: calc(var(--nav-h) + 5rem);
+      padding-bottom: 5rem;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      border-top: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4rem;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .hero-line { flex: 0 0 30px; height: 1px; background: var(--gold); }
+    h1.hero-name {
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 1.05;
+      margin-bottom: 1.25rem;
+    }
+    .hero-tagline {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--green-mid);
+      margin-bottom: 1.1rem;
+    }
+    .hero-desc { max-width: 480px; font-size: 1rem; line-height: 1.8; }
+    .hero-btns { display: flex; gap: 0.85rem; margin-top: 2rem; flex-wrap: wrap; }
+
+    /* Photo / avatar */
+    .photo-frame {
+      width: 220px;
+      height: 280px;
+      border: 1px solid var(--border-d);
+      border-radius: 2px;
+      background: var(--green-lt);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    /* ✏️ When you add your photo: put <img src="images/maisha.jpg"> inside .photo-frame
+       and remove the .photo-initials and .photo-hint spans.               */
+    .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+    .photo-initials {
+      font-family: var(--serif);
+      font-size: 3.5rem;
+      font-weight: 400;
+      color: var(--green);
+      opacity: 0.4;
+    }
+    .photo-hint { font-size: 0.7rem; color: var(--text-mu); text-align: center; padding: 0 1rem; }
+
+    /* Scroll hint */
+    .scroll-hint { margin-top: 3rem; display: flex; align-items: center; gap: 0.75rem; }
+    .scroll-hint span { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-mu); }
+    .scroll-arrow { width: 20px; height: 1px; background: var(--border-d); position: relative; }
+    .scroll-arrow::after { content: ''; position: absolute; right: -1px; top: -3px; width: 7px; height: 7px; border-right: 1px solid var(--border-d); border-bottom: 1px solid var(--border-d); transform: rotate(-45deg); }
+
+    /* About teaser */
+    #about-teaser { background: var(--bg); }
+    .big-quote {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      color: var(--green);
+      line-height: 1.5;
+      border-left: 3px solid var(--gold);
+      padding-left: 1.75rem;
+      margin-bottom: 2rem;
+    }
+    .stat-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; }
+    .stat-cell { background: var(--card); padding: 1.5rem 1rem; text-align: center; }
+    .stat-cell .num  { font-family: var(--serif); font-size: 2.4rem; color: var(--green); line-height: 1; }
+    .stat-cell .desc { font-size: 0.78rem; color: var(--text-mu); margin-top: 0.3rem; }
+
+    /* Research preview */
+    #research-preview { background: var(--bg); }
+    .rp-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 2rem;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 0.75rem;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .rp-card:hover { box-shadow: 0 6px 28px rgba(42,61,53,0.09); transform: translateY(-2px); }
+    .rp-card h3 { font-size: 1.1rem; line-height: 1.35; }
+    .rp-card p { font-size: 0.9rem; }
+    .rp-status { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .status-review { color: var(--rose); }
+    .status-pub    { color: var(--green-mid); }
+
+    /* Skills snapshot */
+    #skills-snap { background: var(--surface); }
+    .skill-group { margin-bottom: 1.5rem; }
+    .skill-group:last-child { margin-bottom: 0; }
+    .skill-group h4 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-mu); margin-bottom: 0.6rem; }
+
+    /* CTA strip */
+    #cta-strip {
+      background: var(--green);
+      padding: 4rem 0;
+      border-top: none;
+    }
+    #cta-strip h2 { color: var(--white); font-size: clamp(1.6rem, 3vw, 2.4rem); }
+    #cta-strip p  { color: rgba(255,255,255,0.65); margin-top: 0.6rem; }
+    .cta-row { display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; }
+
+    @media (max-width: 640px) {
+      .hero-grid  { grid-template-columns: 1fr; }
+      .photo-frame { width: 160px; height: 200px; order: -1; margin: 0 auto; }
+      .stat-row   { grid-template-columns: 1fr 1fr; }
+      .cta-row    { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAV HAMBURGER TRIGGER (must be before <nav>) ════════════ -->
+<input type="checkbox" id="nav-cb" class="nav-cb">
+
+<!-- ══ NAVIGATION ══════════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Maisha <em>Maliha</em></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="interests.html">Interests</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li class="nav-cta"><a href="contact.html">Contact</a></li>
+    </ul>
+    <label for="nav-cb" class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
+  </div>
+</nav>
+
+<!-- ══ HERO ════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+
+      <div>
+        <div class="hero-eyebrow">
+          <div class="hero-line"></div>
+          <!-- ✏️ Update your one-line professional identity -->
+          <span class="label">Economics Researcher · Bangladesh</span>
+        </div>
+
+        <!-- ✏️ Your name -->
+        <h1 class="hero-name">Maisha<br>Maliha.</h1>
+
+        <!-- ✏️ Your one-sentence research identity -->
+        <p class="hero-tagline">Development · Environment · Data</p>
+
+        <!-- ✏️ 2–3 sentences describing what you do and who for -->
+        <p class="hero-desc">
+          I research the economics of everyday life — how households cope with food insecurity,
+          how communities manage waste, and how data can guide better policy.
+          Based in Bangladesh, open to research roles and graduate programmes worldwide.
+        </p>
+
+        <div class="hero-btns">
+          <a href="research.html" class="btn btn-green">View Research</a>
+          <a href="cv.html" class="btn btn-outline">Download CV ↗</a>
+        </div>
+
+        <div class="scroll-hint">
+          <div class="scroll-arrow"></div>
+          <span>Scroll to explore</span>
+        </div>
+      </div>
+
+      <!-- ✏️ Photo: replace the placeholder below with your photo.
+           Save your photo as images/maisha.jpg and replace everything
+           inside .photo-frame with: <img src="images/maisha.jpg" alt="Maisha Maliha"> -->
+      <div class="photo-frame" aria-label="Photo of Maisha Maliha">
+        <img src="images/maisha.jpg" alt="Maisha Maliha">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT TEASER ════════════════════════════════════════════ -->
+<section id="about-teaser">
+  <div class="container">
+    <div class="g32" style="align-items:start;">
+
+      <div>
+        <p class="label">About Me</p>
+        <!-- ✏️ Update this quote — your most compelling self-description -->
+        <p class="big-quote">
+          "Turning messy field data into clear answers for development challenges."
+        </p>
+        <!-- ✏️ 2–3 sentences of your story -->
+        <p>
+          I am a BSS (Economics) graduate from the University of Barishal with a GPA of 3.69/4,
+          and a track record of designing and executing field research with hundreds of households
+          across coastal Bangladesh. My methods span STATA econometrics, NVivo qualitative coding,
+          and structured field surveys — always in service of understanding how real people
+          navigate real economic pressures.
+        </p>
+        <a href="about.html" class="btn btn-outline mt-3" style="display:inline-flex;">
+          Read Full Bio →
+        </a>
+      </div>
+
+      <!-- Quick stats -->
+      <div>
+        <div class="stat-row">
+          <div class="stat-cell">
+            <div class="num">3.69</div>
+            <div class="desc">Final GPA out of 4.0</div>
+          </div>
+          <div class="stat-cell">
+            <div class="num">831+</div>
+            <div class="desc">Households surveyed across two studies</div>
+          </div>
+          <div class="stat-cell">
+            <div class="num">2</div>
+            <div class="desc">Peer-reviewed papers under review</div>
+          </div>
+          <div class="stat-cell">
+            <div class="num">C1</div>
+            <div class="desc">IELTS Academic English level</div>
+          </div>
+        </div>
+
+        <!-- Availability -->
+        <div class="card-surface mt-3" style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+          <div class="avail-dot" style="background:#4ade80;width:9px;height:9px;border-radius:50%;flex-shrink:0;"></div>
+          <!-- ✏️ Update this to reflect your current availability -->
+          <p style="font-size:0.88rem; color:var(--green); margin:0;">
+            <strong>Currently available</strong> for research positions and graduate programme applications (2025–2026).
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ RESEARCH PREVIEW ════════════════════════════════════════ -->
+<section id="research-preview">
+  <div class="container">
+    <div class="sec-head">
+      <p class="label">Selected Research</p>
+      <h2>Where my work lives.</h2>
+      <p>Primary research on food, environment, and economic behaviour in coastal Bangladesh.</p>
+    </div>
+
+    <div class="g2">
+
+      <!-- Research card 1 -->
+      <article class="rp-card card-accent">
+        <div>
+          <span class="tag tag-gold">Waste Management · Behaviour</span>
+          <div class="tags mt-1">
+            <span class="tag tag-green">STATA 14.0</span>
+            <span class="tag tag-green">NVivo 15</span>
+            <span class="tag tag-green">431 Households</span>
+          </div>
+        </div>
+        <div>
+          <h3>Assessing Waste Management Behaviour through a KAP Lens: Coastal Urban Households in Bangladesh</h3>
+          <p class="mt-1">
+            Applied a Knowledge, Attitude, and Practice framework to understand household waste
+            behaviours across coastal urban settlements. Used linear regression, logistic regression,
+            chi-square tests, and thematic analysis.
+          </p>
+        </div>
+        <p class="rp-status status-review">● Under Review for Publication</p>
+      </article>
+
+      <!-- Research card 2 -->
+      <article class="rp-card card-accent">
+        <div>
+          <span class="tag tag-gold">Food Security · Coastal</span>
+          <div class="tags mt-1">
+            <span class="tag tag-green">STATA 14.0</span>
+            <span class="tag tag-green">400 Households</span>
+            <span class="tag tag-green">Poisson Regression</span>
+          </div>
+        </div>
+        <div>
+          <h3>Assessing Food Security and Household Coping Strategies in Coastal Bhola: An Empirical Study</h3>
+          <p class="mt-1">
+            Primary data from 400 households in coastal Bhola analysed using logistic and Poisson
+            regression to map food insecurity patterns and identify key socioeconomic drivers
+            of coping strategies.
+          </p>
+        </div>
+        <p class="rp-status status-review">● Under Review for Publication</p>
+      </article>
+
+    </div>
+
+    <div style="margin-top:2rem; display:flex; gap:1rem; align-items:center;">
+      <a href="research.html" class="btn btn-outline">All Research →</a>
+      <a href="writing.html" class="btn btn-outline">Writing Samples →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SKILLS SNAPSHOT ══════════════════════════════════════════ -->
+<section id="skills-snap">
+  <div class="container">
+    <div class="g2" style="align-items:start;">
+      <div>
+        <p class="label">Skills & Tools</p>
+        <h2>How I work with data.</h2>
+        <p class="mt-2">
+          My toolkit covers the full research pipeline — from designing survey instruments
+          in the field to running econometric models and writing publishable reports.
+        </p>
+        <a href="experience.html" class="btn btn-outline mt-3" style="display:inline-flex;">
+          See Full Experience →
+        </a>
+      </div>
+
+      <div>
+        <!-- ✏️ Edit these skill groups to match your current expertise -->
+        <div class="skill-group">
+          <h4>Econometrics & Statistical Software</h4>
+          <div class="tags">
+            <span class="tag tag-green">STATA 14.0</span>
+            <span class="tag tag-green">SPSS</span>
+            <span class="tag tag-green">EViews</span>
+            <span class="tag tag-green">Regression Analysis</span>
+            <span class="tag tag-green">Panel Data</span>
+            <span class="tag tag-green">Time Series</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Qualitative Research</h4>
+          <div class="tags">
+            <span class="tag tag-gold">NVivo 15</span>
+            <span class="tag tag-gold">Thematic Analysis</span>
+            <span class="tag tag-gold">KAP Framework</span>
+            <span class="tag tag-gold">Field Surveys</span>
+            <span class="tag tag-gold">Kobo Toolbox</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Research & Communication</h4>
+          <div class="tags">
+            <span class="tag tag-rose">Academic Writing</span>
+            <span class="tag tag-rose">Literature Review</span>
+            <span class="tag tag-rose">Report Writing</span>
+            <span class="tag tag-rose">Stakeholder Engagement</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Digital & Design</h4>
+          <div class="tags">
+            <span class="tag tag-green">MS Office</span>
+            <span class="tag tag-green">Google Suite</span>
+            <span class="tag tag-green">Canva</span>
+            <span class="tag tag-green">Photoshop</span>
+            <span class="tag tag-green">Illustrator</span>
+            <span class="tag tag-green">HTML/CSS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA STRIP ════════════════════════════════════════════════ -->
+<section id="cta-strip">
+  <div class="container">
+    <div class="cta-row">
+      <div>
+        <!-- ✏️ Update based on what you're currently looking for -->
+        <h2>Open to research &amp; academic opportunities.</h2>
+        <p>Scholarship applications, research collaborations, and entry-level analyst roles — let's talk.</p>
+      </div>
+      <a href="contact.html" class="btn btn-gold" style="flex-shrink:0;">Get in Touch →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <p class="f-brand">Maisha <em>Maliha</em></p>
+      <!-- ✏️ Update your one-line description -->
+      <p>Economics researcher from Bangladesh working at the intersection of development, environment, and data.</p>
+      <div style="margin-top:1.25rem;">
+        <!-- ✏️ Update LinkedIn URL -->
+        <a href="https://www.linkedin.com/in/maisha-maliha-economics" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.6); font-size:0.85rem;">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="interests.html">Interests</a></li>
+      <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h5>Research Areas</h5>
+      <ul>
+        <li><a href="research.html">Development Economics</a></li>
+        <li><a href="research.html">Environmental Economics</a></li>
+        <li><a href="research.html">Food Security</a></li>
+        <li><a href="research.html">Waste Management</a></li>
+        <li><a href="research.html">Impact Assessment</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h5>Contact</h5>
+      <ul>
+        <!-- ✏️ Update email and LinkedIn -->
+        <li><a href="mailto:maishavmahi@gmail.com">maishavmahi@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/maisha-maliha-economics" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="contact.html">Send a Message</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-btm">
+    <!-- ✏️ Update year -->
+    <p>© 2025 Maisha Maliha. All rights reserved.</p>
+    <p>Built with HTML &amp; CSS · Hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
