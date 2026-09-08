@@ -221,7 +221,14 @@ nav {
   transition: box-shadow 0.25s, transform 0.25s;
 }
 .card:hover { box-shadow: 0 6px 28px rgba(42,61,53,0.09); transform: translateY(-2px); }
-.card-accent { border-left: 3px solid var(--gold); border-radius: 0 var(--r-lg) var(--r-lg) 0; }
+.card-accent {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-accent .btn {
+  margin-top: auto;
+}
 .card-surface { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 1.5rem; }
 
 /* ── TAGS ───────────────────────────────────────────────────────── */
