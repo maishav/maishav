@@ -128,19 +128,19 @@
 
     /* Photo / avatar */
     .photo-frame {
-      width: 220px;
-      height: 280px;
-      border: 1px solid var(--border-d);
-      border-radius: 2px;
-      background: var(--green-lt);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      flex-shrink: 0;
-      position: relative;
-      overflow: hidden;
+     width: 480px;
+    height: 270px;
+    border: 1px solid var(--border-d);
+    border-radius: 2px;
+    background: var(--green-lt);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
     }
     /* ✏️ When you add your photo: put <img src="images/maisha.jpg"> inside .photo-frame
        and remove the .photo-initials and .photo-hint spans.               */
@@ -213,10 +213,10 @@
     .cta-row { display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; }
 
     @media (max-width: 640px) {
-      .hero-grid  { grid-template-columns: 1fr; }
-      .photo-frame { width: 160px; height: 200px; order: -1; margin: 0 auto; }
-      .stat-row   { grid-template-columns: 1fr 1fr; }
-      .cta-row    { flex-direction: column; align-items: flex-start; }
+    .hero-grid  { grid-template-columns: 1fr; }
+    .photo-frame { width: 100%; height: auto; aspect-ratio: 16/9; order: -1; margin: 0 auto; }
+    .stat-row   { grid-template-columns: 1fr 1fr; }
+    .cta-row    { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -285,7 +285,7 @@
            Save your photo as images/maisha.jpg and replace everything
            inside .photo-frame with: <img src="images/maisha.jpg" alt="Maisha Maliha"> -->
       <div class="photo-frame" aria-label="Photo of Maisha Maliha">
-        <img src="images/maisha photo 1.jpg" alt="Maisha Maliha">
+        <img src="images/Home-photo-1.jpg" alt="Maisha Maliha">
       </div>
 
     </div>
