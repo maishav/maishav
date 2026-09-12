@@ -37,7 +37,7 @@
     .entry-year { font-family:var(--serif); font-size:0.85rem; color:var(--text-mu); margin-bottom:0.35rem; }
     .entry-venue { font-size:0.8rem; color:var(--green-mid); font-weight:600; margin-bottom:0.4rem; }
     .entry-title { font-family:var(--serif); font-size:1.15rem; font-weight:500; color:var(--green); line-height:1.3; margin-bottom:0.5rem; }
-    .entry-desc  { font-size:0.9rem; color:var(--text-sec); line-height:1.7; }
+    .entry-desc  { font-size:0.9rem; color:var(--text-sec); line-height:1.7; text-align: justify;hyphens: auto;}
     .entry-link  { flex-shrink:0; }
 
     /* Upload instructions box */
@@ -111,23 +111,16 @@
             <div>
               <div class="entry-year">2025 — Under Review</div>
               <div class="entry-venue">Peer-Reviewed Journal (TBC on acceptance)</div>
-              <div class="entry-title">Assessing Waste Management Behaviour through a KAP Lens: Coastal Urban Households in Bangladesh</div>
+              <div class="entry-title">Assessing Household Waste Management Behaviour through a Knowledge, Attitude, and Practice (KAP) Lens: Case Study of a Deltaic Urban City in Bangladesh</div>
               <p class="entry-desc">
-                Primary field study of 431 households applying the Knowledge, Attitude, and Practice
-                framework. Combines logistic regression and chi-square testing (STATA 14.0) with
-                NVivo 15 thematic analysis to identify behavioural predictors of sustainable waste
-                disposal in coastal urban settings.
+                full text available upon acceptance.
               </p>
-              <div class="tags mt-2">
-                <span class="tag tag-green">Environmental Economics</span>
-                <span class="tag tag-gold">STATA · NVivo</span>
-                <span class="tag tag-rose">Under Review</span>
-              </div>
+              
             </div>
             <div class="entry-link">
               <!-- ✏️ When published, add the DOI/link here. Until then, link to your PDF draft if you have one. -->
-              <a href="files/kap-waste-management-draft.pdf" class="btn btn-outline btn-sm" target="_blank">
-                PDF Draft ↗
+              <!-- <a href="files/kap-waste-management-draft.pdf" class="btn btn-outline btn-sm" target="_blank"
+              PDF Draft ↗-->
               </a>
             </div>
           </article>
@@ -139,46 +132,19 @@
               <div class="entry-venue">Peer-Reviewed Journal (TBC on acceptance)</div>
               <div class="entry-title">Assessing Food Security and Household Coping Strategies in Coastal Bhola: An Empirical Study</div>
               <p class="entry-desc">
-                Empirical study of food insecurity and coping strategies across 400 households in
-                coastal Bhola using logistic and Poisson regression in STATA 14.0. Identifies
-                key socioeconomic predictors of food insecurity and ranks frequency of household
-                coping behaviours.
+                full text available upon acceptance.
               </p>
-              <div class="tags mt-2">
+              <!--div class="tags mt-2">
                 <span class="tag tag-green">Development Economics</span>
                 <span class="tag tag-gold">STATA · Econometrics</span>
                 <span class="tag tag-rose">Under Review</span>
-              </div>
+              </div>-->
             </div>
             <div class="entry-link">
               <!-- ✏️ Link to your PDF draft -->
-              <a href="files/food-security-bhola-draft.pdf" class="btn btn-outline btn-sm" target="_blank">
+              <!-- <a href="files/food-security-bhola-draft.pdf" class="btn btn-outline btn-sm" target="_blank">
                 PDF Draft ↗
-              </a>
-            </div>
-          </article>
-
-          <!-- Entry 3 — Published contribution -->
-          <article class="writing-entry">
-            <div>
-              <div class="entry-year">2024 — Published</div>
-              <div class="entry-venue">Heliyon (Elsevier) — Peer-Reviewed Journal</div>
-              <div class="entry-title">HPV Awareness among Parents of Young Girls in Bangladesh [Contributor]</div>
-              <p class="entry-desc">
-                Nationwide published research on HPV awareness levels. Contributed as volunteer
-                data collector — collected data from 200+ parents across 5 Barishal schools with
-                100% accuracy. Study directly influenced national health policy discussions.
-              </p>
-              <div class="tags mt-2">
-                <span class="tag tag-green">Health Economics</span>
-                <span class="tag tag-green">Published</span>
-                <span class="tag tag-gold">Data Contributor</span>
-              </div>
-            </div>
-            <div class="entry-link">
-              <a href="https://doi.org/10.1016/j.heliyon.2024.e30897" class="btn btn-green btn-sm" target="_blank" rel="noopener">
-                View Paper ↗
-              </a>
+              </a> -->
             </div>
           </article>
 
@@ -187,26 +153,48 @@
 
           <!-- ✏️ Add your Innovision reports, field notes, or project briefs here -->
           <article class="writing-entry">
-            <div>
-              <div class="entry-year">2025 — Professional</div>
-              <div class="entry-venue">Innovision Consulting Private Limited, Dhaka</div>
-              <div class="entry-title">Impact Assessment Reports — Youth Entrepreneurship Programme [Sample / Excerpt]</div>
-              <p class="entry-desc">
-                Analytical briefs and impact assessment reports produced during tenure at Innovision
-                Consulting. Assessed microeconomic impacts on youth-led enterprises, documented
-                stakeholder consultation findings, and prepared case studies for strategic
-                decision-making. (Confidential — excerpt available on request.)
-              </p>
-              <div class="tags mt-2">
-                <span class="tag tag-gold">Impact Assessment</span>
-                <span class="tag tag-gold">Report Writing</span>
-                <span class="tag tag-rose">Available on Request</span>
-              </div>
-            </div>
-            <div class="entry-link">
-              <a href="contact.html" class="btn btn-outline btn-sm">Request ↗</a>
-            </div>
-          </article>
+  <div>
+    <div class="entry-year">2025 — 2026</div>
+    <div class="entry-venue">Innovision Consulting Private Limited, Dhaka</div>
+    <div class="entry-title">Turning Waste into Clean Energy: A Circular Economy Case Study</div>
+    <div class="entry-desc expandable-desc" id="case-study-desc">
+      
+      <p>Founded in the mid-2010s, this Bangladeshi enterprise emerged in response to a largely invisible but serious problem in Bangladesh's food system: the unsafe reuse and disposal of used cooking oil. Repeatedly reused oil can become carcinogenic, while improper disposal contaminates water bodies and drains, posing risks to public health and the environment.
+      The company developed a model to systematically collect used cooking oil from restaurants and convert it into biodiesel, a renewable alternative to fossil fuel. What began as an early-stage idea gradually evolved into a scalable circular economy solution that addresses waste management, clean energy production, and climate mitigation simultaneously.
+      The company engaged with an international youth entrepreneurship innovation platform during its early growth phase, when the business was still exploring viable pathways to scale. Through this platform's ecosystem linkages and international exposure — including engagements across multiple South and Southeast Asian markets — the founders gained critical insights into global renewable fuel markets. Prior to this exposure, exporting was not part of the company's strategic vision.
+      Within a few years of formal registration as a limited company, the enterprise began scaling operations nationally. Today, it operates a nationwide network of approximately 1,900 restaurant collection points across Bangladesh. On average, it exports around 100 tons of processed oil per month to international markets across Asia and Europe. Its products are integrated into global renewable fuel supply chains, including feedstock for Sustainable Aviation Fuel (SAF), and the company undergoes annual international sustainability audits.
+      According to the founder, biodiesel produced from recycled cooking oil can reduce carbon dioxide emissions by approximately 80 percent compared to mineral diesel. This makes the model particularly relevant for hard-to-abate sectors such as aviation, where rapid infrastructure replacement is not feasible.
+      Beyond environmental benefits, the model creates economic value across the supply chain. What was once a waste product has become an income source for restaurants and low-income restaurant workers. The enterprise indirectly supports around 1,900 individuals within the restaurant ecosystem through waste-to-income linkages.
+      From a business perspective, the enterprise has grown significantly — moving from a modest monthly revenue base during its early platform engagement to a substantial annual export value today. While the innovation platform did not provide direct funding, it played a catalytic role by expanding the company's market outlook, credibility, and global connectivity.
+      This case illustrates how locally rooted innovation, when supported by credible networks and exposure, can scale into a globally relevant climate solution.
+    </p>
+    
+    </div>
+    <button type="button" class="read-more-btn" data-target="case-study-desc">Read the full case story ↓</button>
+  </div>
+  <div class="entry-link">
+    <!-- <a href="contact.html" class="btn btn-outline btn-sm">Request ↗</a> -->
+  </div>
+</article>
+
+<article class="writing-entry">
+  <div>
+    <div class="entry-year">2023 — 2026</div>
+    <div class="entry-venue">Field Research Across Four Studies, 2023–2026"</div>
+    <div class="entry-title">Before the Numbers: A Field Researcher's Notebook</div>
+    <div class="entry-desc expandable-desc" id="field-experience-desc">
+      
+    <p>
+      To be added soon.
+    </p>
+    
+    </div>
+    <button type="button" class="read-more-btn" data-target="field-experience-desc">Read the full case story ↓</button>
+  </div>
+  <div class="entry-link">
+    <!-- <a href="contact.html" class="btn btn-outline btn-sm">Request ↗</a> -->
+  </div>
+</article>
 
           <!-- ✏️ ADD MORE ENTRIES HERE — duplicate an article block above -->
 
@@ -230,42 +218,22 @@
             </div>
           </article>
           -->
-
-          <div class="card-surface" style="text-align:center; padding:2.5rem;">
-            <p style="font-family:var(--serif); font-style:italic; font-size:1.1rem; color:var(--text-mu);">
-              Op-eds and articles will appear here as they are published.
-            </p>
-            <p class="mt-1" style="font-size:0.85rem; color:var(--text-mu);">✏️ See GUIDE.md → "Adding Writing Samples" to add links here.</p>
-          </div>
+          <article class="writing-entry">
+            <div>
+              <div class="entry-year">2025</div>
+              <div class="entry-venue">LinkedIn</div>
+              <div class="entry-title">Saint Martin's: Protecting Nature Through Smart Policy</div>
+              <p class="entry-desc">Bangladesh's government recently launched a 3-year conservation initiative for Saint Martin's Island, the country's only coral island, introducing a tourist conservation fee alongside a zoning plan, plastic bans, and livelihood support for local families. This piece unpacks the policy as a practical case of environmental economics in action — using pricing to internalize the ecological cost of tourism rather than restricting access outright. It reflects on why "putting a value on nature" is often the more sustainable path to protecting it than an outright ban.</p>
+              <div class="tags mt-2">
+                <!--span class="tag tag-green">Environmental Economics · Policy Commentary · Published</span-->
+              </div>
+            </div>
+            <div class="entry-link">
+              <a href="https://lnkd.in/p/gRH3u9pA" class="btn btn-green btn-sm" target="_blank">Read ↗</a>
+            </div>
+          </article>
 
         </div>
-
-        <!-- Sidebar -->
-        <div>
-          <!-- Upload guide -->
-          <div class="upload-guide">
-            <h3>📎 How to Add Your Own Writing Samples</h3>
-            <p style="font-size:0.85rem; margin-bottom:1rem; color:var(--text-sec);">
-              For PDFs (research drafts, reports):
-            </p>
-            <ol>
-              <li>Create a <code>files/</code> folder in your portfolio folder</li>
-              <li>Save your PDF there (e.g. <code>my-paper.pdf</code>)</li>
-              <li>In this page, set <code>href="files/my-paper.pdf"</code></li>
-              <li>Upload to GitHub — it will be accessible online</li>
-            </ol>
-            <p style="font-size:0.85rem; margin-top:1rem; color:var(--text-sec);">
-              For external links (newspaper, journal):
-            </p>
-            <ol>
-              <li>Copy an <code>&lt;article class="writing-entry"&gt;</code> block</li>
-              <li>Edit the year, venue, title, and description</li>
-              <li>Set <code>href="https://..."</code> on the button</li>
-            </ol>
-            <p style="font-size:0.85rem; margin-top:1rem;">
-              See <strong>GUIDE.md</strong> for the full step-by-step with screenshots.
-            </p>
-          </div>
 
           <!-- Writing stats -->
           <div class="card mt-3" style="text-align:center;">
@@ -327,6 +295,17 @@
     <p>Built with HTML &amp; CSS · Hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a></p>
   </div>
 </footer>
-
+<script>
+  document.querySelectorAll('.read-more-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = document.getElementById(btn.getAttribute('data-target'));
+      if (!target) return;
+      var expanded = target.classList.toggle('is-expanded');
+      btn.textContent = expanded ? 'Show less ↑' : 'Read the full case story ↓';
+    });
+  });
+</script>
+</body>
+</html>
 </body>
 </html>

@@ -338,3 +338,40 @@ footer { background: var(--green); }
 @media (max-width: 480px) {
   .container { padding: 0 1.25rem; }
 }
+/* ── EXPANDABLE "READ MORE" DESCRIPTION ────────────────────────── */
+.expandable-desc {
+  position: relative;
+  overflow: hidden;
+  max-height: 4.9em;
+  transition: max-height 0.4s ease;
+}
+.expandable-desc p { margin: 0 0 0.9em; text-align: justify; }
+.expandable-desc p:last-child { margin-bottom: 0; }
+.expandable-desc::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 2.2em;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), var(--card));
+  transition: opacity 0.3s ease;
+}
+.expandable-desc.is-expanded { max-height: 6000px; }
+.expandable-desc.is-expanded::after { opacity: 0; }
+
+.read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.75rem;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.read-more-btn:hover { color: var(--gold); }
